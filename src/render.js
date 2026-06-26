@@ -1,5 +1,22 @@
 // Renders index.template.html against SITE config: replaces {{token.path}} with
 // escaped values, {{html.partial}} with prebuilt markup, injects window.SITE.
+import { readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+import { fileURLToPath } from "node:url";
+import { dirname, join } from "node:path";
+
+// Short content hash of the JS+CSS, appended as ?v= so browsers re-fetch them
+// only when they actually change (HTML is no-cache; assets cache for days).
+const ASSET_DIR = join(dirname(fileURLToPath(import.meta.url)), "..", "public", "assets");
+function assetVersion() {
+  try {
+    const h = createHash("sha1");
+    h.update(readFileSync(join(ASSET_DIR, "js", "main.js")));
+    h.update(readFileSync(join(ASSET_DIR, "css", "styles.css")));
+    return h.digest("hex").slice(0, 8);
+  } catch { return "1"; }
+}
+
 const esc = (s) =>
   String(s ?? "").replace(/[&<>"']/g, (c) =>
     ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -157,6 +174,7 @@ export function renderPage(template, site, opts = {}) {
   const ext = {
     ...site,
     stats: { ...site.stats, homesCleanedFmt: site.stats.homesCleaned.toLocaleString("en-US") },
+    assetVersion: assetVersion(),
     year,
   };
 
