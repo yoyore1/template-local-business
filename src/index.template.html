@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{seo.title}}</title>
+  <meta name="description" content="{{seo.description}}">
+  <link rel="canonical" href="{{seo.url}}">
+  <meta name="theme-color" content="#FBFAF7">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{seo.title}}">
+  <meta property="og:description" content="{{seo.description}}">
+  <meta property="og:url" content="{{seo.url}}">
+  <meta property="og:image" content="{{seo.url}}/assets/img/house-wash.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231F6A6F'/%3E%3Cpath d='M16 6c4 5.2 6.2 8.3 6.2 11.3a6.2 6.2 0 0 1-12.4 0C9.8 14.3 12 11.2 16 6z' fill='%23C8A24B'/%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  {{html.jsonLd}}
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ============================ NAV ============================ -->
+  <header class="site-header" data-header>
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="{{brand.name}} home">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__name">{{brand.shortName}}</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a class="nav__link" href="#services">Services</a>
+        <a class="nav__link" href="#proof">Before &amp; After</a>
+        <a class="nav__link" href="#reviews">Reviews</a>
+        <a class="nav__link" href="#area">Service Area</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a class="nav__phone" href="tel:{{brand.phoneHref}}">
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.25 1z"/></svg>
+          <span>{{brand.phone}}</span>
+        </a>
+        <a class="btn btn--gold nav__call" href="tel:{{brand.phoneHref}}" data-pulse>
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.25 1z"/></svg>
+          <span>Call</span>
+        </a>
+        <a class="btn btn--teal nav__estimate" href="#estimate">Free Estimate</a>
+        <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="nav__drawer" data-nav-drawer hidden>
+      <a class="nav__drawer-link" href="#services">Services</a>
+      <a class="nav__drawer-link" href="#proof">Before &amp; After</a>
+      <a class="nav__drawer-link" href="#reviews">Reviews</a>
+      <a class="nav__drawer-link" href="#area">Service Area</a>
+      <div class="nav__drawer-actions">
+        <a class="btn btn--gold" href="tel:{{brand.phoneHref}}">Call {{brand.phone}}</a>
+        <a class="btn btn--teal" href="#estimate">Get My Free Estimate</a>
+      </div>
+    </div>
+  </header>
+
+  <span id="top"></span>
+  <main id="main">
+
+    <!-- ============================ HERO ============================ -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow">Pressure &amp; soft washing · Serving {{brand.city}} &amp; {{brand.region}}</p>
+          <h1 class="hero__title" data-hero-title>Your home, the way it looked the day you fell for it.</h1>
+          <p class="hero__sub">Gentle on your siding, ruthless on the green. {{brand.shortName}} soft-washes siding, roofs, decks and driveways across {{brand.city}} — streak-free, on time, and backed by our {{stats.guaranteeDays}}-day clean guarantee.</p>
+          <div class="hero__cta">
+            <a class="btn btn--teal btn--lg" href="#estimate">Get My Free Estimate</a>
+            <a class="btn btn--ghost btn--lg" href="tel:{{brand.phoneHref}}">
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.25 1z"/></svg>
+              Call {{brand.phone}}
+            </a>
+          </div>
+          <p class="hero__trust">
+            <span class="stars" aria-label="{{stats.rating}} out of 5 stars"></span>
+            <span><strong>{{stats.rating}}</strong> · {{stats.homesCleanedFmt}} homes cleaned · Licensed &amp; insured since {{brand.foundedYear}}</span>
+          </p>
+        </div>
+
+        <div class="hero__media">
+          <figure class="hero__frame">
+            <img src="/assets/img/house-wash.jpg" alt="A home with freshly soft-washed siding" data-ph="Soft-washed siding" width="900" height="1100" fetchpriority="high" decoding="async">
+            <figcaption class="hero__caption">Soft-washed siding · Cedar Grove</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== TRUST LEDGER ====================== -->
+    <section class="ledger" aria-label="Why homeowners choose us">
+      <div class="container ledger__row">
+        <span class="ledger__item">Licensed &amp; Insured</span>
+        <span class="ledger__item">{{stats.guaranteeDays}}-Day Clean Guarantee</span>
+        <span class="ledger__item">Free Same-Week Estimates</span>
+        <span class="ledger__item">Soft-Wash Safe</span>
+        <span class="ledger__item">Locally Owned Since {{brand.foundedYear}}</span>
+      </div>
+    </section>
+
+    <!-- ====================== BEFORE / AFTER ====================== -->
+    <section class="proof" id="proof">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow">The proof</p>
+          <h2 class="section-title">See the difference a clean makes.</h2>
+          <p class="section-intro">Drag the handle. The grime on the left is what we start with — the right is the same surface after one {{brand.shortName}} visit.</p>
+        </div>
+        {{html.beforeAfter}}
+      </div>
+    </section>
+
+    <!-- ====================== SERVICES INDEX ====================== -->
+    <section class="services" id="services">
+      <div class="container services__layout">
+        <div class="services__rail">
+          <p class="eyebrow">What we clean</p>
+          <h2 class="section-title">Six services.<br>One careful crew.</h2>
+          <p class="services__note">Every quote is an exact, itemized price — never a vague range.</p>
+          <a class="btn btn--teal" href="#estimate">Get My Free Estimate</a>
+        </div>
+        <div class="services__list">
+          {{html.serviceIndex}}
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= PROCESS ========================= -->
+    <section class="process">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">How it works</p>
+          <h2 class="section-title">From grimy to wow in four steps.</h2>
+        </div>
+        <ol class="process__grid" data-process>
+          {{html.process}}
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========================= GALLERY ========================= -->
+    <section class="works">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Recent work</p>
+          <h2 class="section-title">Real surfaces. Real neighborhoods.</h2>
+        </div>
+        <div class="works__list">
+          {{html.gallery}}
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= REVIEWS ========================= -->
+    <section class="reviews" id="reviews">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow">What neighbors say</p>
+          <h2 class="section-title">{{stats.reviewCount}} reviews. One recurring word: gasped.</h2>
+        </div>
+        {{html.reviews}}
+        <p class="reviews__rating reveal">
+          <span class="stars" aria-hidden="true"></span>
+          Rated {{stats.rating}} across {{stats.reviewCount}} Google reviews
+        </p>
+        <div class="reviews__stats reveal">
+          <span><strong>{{stats.homesCleanedFmt}}+</strong> homes</span>
+          <span><strong>{{stats.yearsInBusiness}} yrs</strong> local</span>
+          <span><strong>{{stats.rating}}</strong> stars</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== OWNER & GUARANTEE ===================== -->
+    <section class="owner">
+      <div class="container owner__inner">
+        <div class="owner__story reveal">
+          <p class="eyebrow">Meet the owner</p>
+          <figure class="owner__media">
+            <img src="/assets/img/owner.jpg" alt="{{brand.ownerName}}, founder of {{brand.name}}" data-ph="Meet {{brand.ownerName}}" width="720" height="520" loading="lazy" decoding="async">
+          </figure>
+          <blockquote class="owner__note">
+            “I started {{brand.shortName}} in {{brand.foundedYear}} with one truck, a soft-wash rig, and a simple rule: treat every house like it's my mother's. Twelve years and {{stats.homesCleanedFmt}} homes later, that hasn't changed. We show up when we say we will, we protect your plants and your shingles, and we don't leave until the property makes you smile.”
+          </blockquote>
+          <p class="owner__sign">— {{brand.ownerName}}, Founder</p>
+        </div>
+
+        <aside class="guarantee reveal" id="area">
+          <div class="guarantee__card">
+            <span class="guarantee__badge">{{stats.guaranteeDays}}</span>
+            <h3 class="guarantee__title">{{stats.guaranteeDays}}-Day Clean Guarantee</h3>
+            <p>If a spot doesn't meet our standard, we come back and re-clean it free. You only pay when you're thrilled — that's the whole deal.</p>
+          </div>
+          <div class="area-cloud">
+            <p class="area-cloud__label">Proudly serving:</p>
+            <ul class="chips">{{html.areaChips}}</ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ========================== FAQ ========================== -->
+    <section class="faqs">
+      <div class="container faqs__inner">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow">Good questions</p>
+          <h2 class="section-title">Questions homeowners ask us.</h2>
+        </div>
+        <div class="faqs__list">
+          {{html.faqs}}
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CLOSE / ESTIMATE ===================== -->
+    <section class="close" id="estimate">
+      <div class="container close__inner">
+        <div class="close__info reveal">
+          <p class="eyebrow eyebrow--light">Ready when you are</p>
+          <h2 class="close__title">Free estimate.<br>Usually within {{stats.responseHours}} hours.</h2>
+          <p class="close__sub">Tell us about the job and we'll send a real, itemized quote — fast, fair, and no pressure.</p>
+          <a class="close__phone" href="tel:{{brand.phoneHref}}">
+            <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.25 1z"/></svg>
+            {{brand.phone}}
+          </a>
+          <p class="close__hours">or call us {{brand.hours}}</p>
+          <ul class="close__areas">{{html.areaCloseList}}</ul>
+        </div>
+
+        <div class="close__form reveal">
+          <form class="form" data-estimate-form novalidate>
+            <p class="form__title">Get my free estimate</p>
+            <div class="field">
+              <label for="f-name">Your name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="f-phone">Phone</label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel" required>
+            </div>
+            <div class="field">
+              <label for="f-address">Address or ZIP</label>
+              <input id="f-address" name="address" type="text" autocomplete="postal-code">
+            </div>
+            <div class="field">
+              <label for="f-service">What needs cleaning?</label>
+              <div class="select-wrap">
+                <select id="f-service" name="services">
+                  <option value="" disabled selected>Select a service</option>
+                  {{html.formServiceOptions}}
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-message">Anything we should know?</label>
+              <textarea id="f-message" name="message" rows="3" placeholder="e.g. two-story vinyl siding + a mossy back patio"></textarea>
+            </div>
+            <!-- spam trap: must stay empty -->
+            <div class="hp" aria-hidden="true">
+              <label for="f-company">Company</label>
+              <input id="f-company" name="company" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <button class="btn btn--gold form__submit" type="submit" data-submit>Send My Free Estimate</button>
+            <p class="form__reassure">No spam. No pressure. A real local person replies — usually within the hour.</p>
+            <p class="form__status" data-form-status role="status" aria-live="polite" hidden></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================== FOOTER ========================== -->
+  <footer class="footer">
+    <div class="container footer__top">
+      <div class="footer__brand">
+        <a class="brand brand--light" href="#top">
+          <span class="brand__dot" aria-hidden="true"></span>
+          <span class="brand__name">{{brand.shortName}}</span>
+        </a>
+        <p class="footer__tagline">{{brand.tagline}}</p>
+        <a class="footer__cta" href="tel:{{brand.phoneHref}}">{{brand.phone}}</a>
+        <a class="footer__email" href="mailto:{{brand.email}}">{{brand.email}}</a>
+      </div>
+      <div class="footer__col">
+        <h3>Services</h3>
+        <ul>{{html.serviceFooter}}</ul>
+      </div>
+      <div class="footer__col footer__col--area">
+        <h3>Service Area</h3>
+        <ul>{{html.areaFooter}}</ul>
+      </div>
+      <div class="footer__col">
+        <h3>Hours &amp; Info</h3>
+        <ul>
+          <li>{{brand.hours}}</li>
+          <li>{{brand.license}}</li>
+          <li>{{brand.legalName}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© {{html.year}} {{brand.legalName}}</span>
+      <span>Built for {{brand.city}} &amp; Tri-County homeowners</span>
+    </div>
+  </footer>
+
+  <!-- ===================== MOBILE STICKY DOCK ===================== -->
+  <div class="dock" data-dock>
+    <a class="dock__btn dock__btn--call" href="tel:{{brand.phoneHref}}">
+      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.25 1z"/></svg>
+      Call
+    </a>
+    <a class="dock__btn dock__btn--estimate" href="#estimate">Free Estimate</a>
+  </div>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
