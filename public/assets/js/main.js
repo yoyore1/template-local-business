@@ -124,9 +124,9 @@
       t.addEventListener("click", () => {
         $$(".ba__thumb", ba).forEach((x) => { x.classList.remove("is-active"); x.setAttribute("aria-pressed", "false"); });
         t.classList.add("is-active"); t.setAttribute("aria-pressed", "true");
-        const src = `/assets/img/${t.dataset.img}.jpg`;
-        if (afterImg) afterImg.src = src;
-        if (beforeImg) beforeImg.src = src;
+        if (afterImg) afterImg.src = `/assets/img/${t.dataset.after}.jpg`;
+        if (beforeImg) beforeImg.src = `/assets/img/${t.dataset.before}.jpg`;
+        ba.classList.toggle("is-real", Boolean(t.dataset.real));
         setPos(50);
       });
     });

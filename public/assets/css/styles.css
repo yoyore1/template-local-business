@@ -215,6 +215,9 @@ ul, ol { list-style: none; padding: 0; }
     radial-gradient(90px 70px at 48% 88%, rgb(40 50 32 / .5), transparent 70%),
     linear-gradient(180deg, rgb(60 62 40 / .25), rgb(40 44 30 / .35));
 }
+/* Real before photo supplied — drop the simulated grime entirely */
+.ba.is-real .ba__img--before { filter: none; }
+.ba.is-real .ba__before::after { content: none; }
 .ba__tag { position: absolute; top: 14px; z-index: 4; font-size: .68rem; font-weight: 600; letter-spacing: .12em; color: #fff; background: rgb(22 40 44 / .7); padding: .35rem .6rem; }
 .ba__tag--before { left: 14px; }
 .ba__tag--after { right: 14px; }
